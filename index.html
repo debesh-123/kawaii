@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kawaii</title>
+    <link rel="icon" type="image/png" href="Cry.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <header class="hero">
+          <div class="hero-shell">
+            <div class="hero-copy">
+              <div class="hero-chip-row">
+                <span class="hero-chip">Arch vibe</span>
+                <span class="hero-chip">Hyprland feel</span>
+                <span class="hero-chip">Focus mode</span>
+              </div>
+              <h1>Kawaii</h1>
+              <p class="subtitle">Just Focus on exam :')</p>
+              <div class="hero-stats">
+                <div class="hero-stat-card">
+                  <span class="stat-label">Layout</span>
+                  <strong>Menu Rice</strong>
+                </div>
+                <div class="hero-stat-card">
+                  <span class="stat-label">Mood</span>
+                  <strong>Anime Glass</strong>
+                </div>
+                <div class="hero-stat-card">
+                  <span class="stat-label">Exam</span>
+                  <strong>Clean & Calm</strong>
+                </div>
+              </div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+              <div class="hero-visual-frame">
+                <img src="images.jpg" alt="" class="hero-anime" />
+                <div class="visual-orbit orbit-one"></div>
+                <div class="visual-orbit orbit-two"></div>
+                <div class="visual-dock">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <section id="categorySelection">
+          <h2 class="screen-title">Choose a Section</h2>
+          <p class="screen-note">
+            Start with mock tests and year-wise PYQs. Section-wise practice and
+            formula recap can be filled slowly later.
+          </p>
+          <div id="categoryGrid" class="category-grid"></div>
+        </section>
+
+        <section id="setSelection" class="hidden">
+          <div class="list-header">
+            <button
+              type="button"
+              id="backToCategoriesBtn"
+              class="secondary-btn"
+            >
+              Back to Categories
+            </button>
+          </div>
+          <h2 id="setSelectionTitle" class="screen-title">Choose a Test</h2>
+          <p id="setSelectionNote" class="screen-note"></p>
+          <div id="setGrid" class="set-grid"></div>
+        </section>
+
+        <section id="quizScreen" class="hidden">
+          <div class="top-bar">
+            <div class="test-meta">
+              <h2 id="currentSetTitle">Mock Test</h2>
+              <p id="currentSetDescription" class="start-note"></p>
+            </div>
+            <div class="timer-box">
+              Time Left: <span id="timer">20:00</span>
+            </div>
+          </div>
+
+          <div class="actions top-actions">
+            <button type="button" id="backBtn" class="secondary-btn">
+              Back to Sets
+            </button>
+            <button type="button" id="startBtn">Start Test</button>
+          </div>
+
+          <div id="paletteWrapper" class="palette-wrapper hidden">
+            <div class="palette-top">
+              <h3>Question Palette</h3>
+              <div class="palette-legend">
+                <span class="legend-item"
+                  ><span class="legend-box current-box"></span> Current</span
+                >
+                <span class="legend-item"
+                  ><span class="legend-box answered-box"></span> Answered</span
+                >
+                <span class="legend-item"
+                  ><span class="legend-box visited-box"></span> Visited</span
+                >
+                <span class="legend-item"
+                  ><span class="legend-box not-visited-box"></span> Not
+                  Visited</span
+                >
+              </div>
+            </div>
+
+            <div id="questionPalette" class="question-palette"></div>
+
+            <div class="section-nav-box">
+              <h3>Sections</h3>
+              <div id="sectionNav" class="section-nav"></div>
+            </div>
+          </div>
+
+          <form id="quizForm" class="hidden"></form>
+
+          <div class="actions hidden" id="submitArea">
+            <button type="button" id="submitBtn">Submit Test</button>
+            <button type="button" id="resetBtn">Reset</button>
+          </div>
+
+          <div id="result" class="hidden"></div>
+        </section>
+      </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
