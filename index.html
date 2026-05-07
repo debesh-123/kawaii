@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NLM Graph Notes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <main class="app-shell">
+    <header class="top-bar">
+      <div>
+        <p class="eyebrow">Graph Notes System</p>
+        <h1 id="screenTitle">Science Map</h1>
+        <p class="subtitle" id="screenSubtitle">
+          Tap a subject to open chapters. Tap a chapter to open concept maps.
+        </p>
+      </div>
+
+      <div class="header-actions">
+        <button id="homeBtn" class="ghost-btn">Home</button>
+        <button id="backBtn" class="ghost-btn">Back</button>
+      </div>
+    </header>
+
+    <section class="graph-card">
+      <div class="graph-toolbar">
+        <div class="crumbs" id="crumbs">Subjects</div>
+
+        <div class="toolbar-actions">
+          <input id="searchInput" type="text" placeholder="Search..." />
+          <button id="zoomOutBtn">−</button>
+          <button id="zoomInBtn">+</button>
+          <button id="pauseBtn">Pause</button>
+          <button id="centerBtn">Center</button>
+        </div>
+      </div>
+
+      <div class="mini-controls">
+        <div class="route-status" id="routeStatus">
+          <span></span>
+          Route: Science Stream
+        </div>
+
+        <div class="speed-control">
+          <label for="speedRange">Speed</label>
+          <input id="speedRange" type="range" min="0.5" max="3" step="0.1" value="1.4" />
+          <strong id="speedValue">1.4x</strong>
+        </div>
+      </div>
+
+      <div id="graphArea" class="graph-area">
+        <div id="graphWorld" class="graph-world">
+          <svg id="linkLayer"></svg>
+          <div id="nodeLayer"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="topic-page hidden" id="topicPage">
+    <div class="topic-bg-glow"></div>
+
+    <div class="topic-shell">
+      <button id="topicBackBtn" class="back-topic-btn">← Back to Graph</button>
+
+      <div class="topic-hero">
+        <p class="panel-kicker" id="noteType">Concept</p>
+        <h2 id="noteTitle">Force</h2>
+        <p class="short-note" id="noteShort"></p>
+      </div>
+
+      <div class="topic-grid">
+        <article class="note-block big-card">
+          <h3>Explanation</h3>
+          <p id="noteDetails"></p>
+        </article>
+
+        <article class="note-block formula-block big-card">
+          <h3>Formula / Key Line</h3>
+          <p id="noteFormula"></p>
+        </article>
+
+        <article class="note-block trap-block big-card">
+          <h3>Common Trap</h3>
+          <p id="noteTrap"></p>
+        </article>
+
+        <article class="note-block big-card">
+          <h3>Exam Importance</h3>
+          <p id="noteImportance"></p>
+        </article>
+      </div>
+
+      <div class="related-box topic-related">
+        <h3>Connected Topics</h3>
+        <div id="relatedTopics"></div>
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
